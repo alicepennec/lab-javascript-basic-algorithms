@@ -61,3 +61,19 @@ let countWordEt = 0
      if (longText[i] === "e" && longText [i+1] === "t") {countWordEt ++}
  }
    console.log(countWordEt)
+
+// Bonus 2:
+const phraseToCheck = "c'est un test"
+
+const regex = /[^a-zA-Z]+/g
+const phraseToCheckTemp = phraseToCheck.replace(regex, "").toUpperCase()
+
+let phraseToCheckReverse = ""
+  for (let i=phraseToCheckTemp.length-1; i>=0; i--) {
+    phraseToCheckReverse += phraseToCheckTemp[i]}
+
+console.log(phraseToCheckReverse)
+if (phraseToCheckReverse === phraseToCheckTemp) {
+  console.log("This is a palindrome")
+}
+else {console.log("This is not a palindrome")}
